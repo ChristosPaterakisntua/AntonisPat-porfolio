@@ -1,0 +1,311 @@
+:root {
+    --primary-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --primary-text-color: aliceblue;
+}
+
+
+/* HEADER    */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #1965a7;
+    background-image: url(imgs/header-extra.png);
+    background-size: cover;
+}
+
+.header-item {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.header-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-col p {
+    color: var(--primary-text-color);
+    margin: 10px 0 0 0;
+}
+
+.header-col h1 {
+    color: var(--primary-text-color);
+    margin: 0;
+}
+
+.header-col h2 {
+    color: var(--primary-text-color);
+    margin: 0;
+}
+
+.header-col ul {
+    color: var(--primary-text-color);
+    margin: 0 5px 0 -10px;
+}
+
+h1 {
+    color: var(--primary-text-color);
+    font-size: 46px;
+    font-family: var(--primary-font-family);
+}
+
+h2 {
+    color: var(--primary-text-color);
+    font-size: 30px;
+    font-family: var(--primary-font-family);
+}
+
+h3 {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* PROFILE PIC */
+
+.profile-pic {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+/* SOCIAL ICONS */
+
+.social {
+    display: flex;
+    column-gap: 15px;
+}
+
+.social img {
+    height: 40px;
+    width: 40px;
+}
+
+/* CONTACT */
+
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+
+.main-col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.main-col p {
+    margin: 0;
+}
+
+.main-col ul {
+    margin: 0;
+}
+
+.main-col a {
+    color: var(--primary-text-color);
+}
+
+body {
+    background-color: #1996a7;
+    background-image: url(imgs/background-extra.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+/* CP-BTN */
+
+.cp-btn {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.cp-btn button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.cp-btn .cp-btntext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: #555;
+  color: #fff;
+  border-radius: 25%;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -25px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cp-btn .cp-btntext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.cp-btn:hover .cp-btntext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cp-icon {
+    height: 16px;
+    width: 16px;
+}
+
+/* AUDIO PLAYER */
+
+.ost-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 2px solid #1965a7;
+    border-radius:15px;
+    background-color:#0a899a;
+    padding: 5px;
+}
+
+.ost-main {
+    display: flex;
+    align-items: center;
+}
+
+.audio-txt {
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+.progress-bar {
+    position: relative;
+    align-self: center;
+    width: 80%;
+    height: 4px;
+    background-color: #555;
+    border-radius: 2px;
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.progress-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 0%;
+    height: 100%;
+
+    background-color: var(--primary-text-color);
+    border-radius: 2px;
+}
+
+.progress-dot {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-text-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: grab;
+}
+
+.progress-dot:active {
+    cursor: grabbing;
+}
+
+.progress-bar .time-current {
+    position: absolute;
+    left: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+}
+
+.progress-bar .time-total {
+    position: absolute;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+}
+
+/* PLAYER BTN */
+
+.player-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.player-btn img {
+    height: 40px;
+    width: 40px;
+}
+
+.player-btn:hover img {
+    opacity: 0.8;
+}
+
+
+/* TEXT */
+
+p {
+    color: var(--primary-text-color);
+    font-size: 16px;
+    font-family: var(--primary-font-family);
+}
+
+.subtitle {
+    color: var(--primary-text-color);
+    font-size: 20px;
+}
+
+ul {
+    color: var(--primary-text-color);
+    font-size: 16px;
+    font-family: var(--primary-font-family);
+}
+
+.tags {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 12px;
+    font-style: italic;
+}
+
+.progress-bar p {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 12px;
+}

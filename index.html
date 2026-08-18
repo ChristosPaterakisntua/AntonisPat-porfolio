@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang = "eng">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AntonisPat</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="imgs/fav-icon.png">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-item">
+                <div class="header-col">
+                    <img class="profile-pic" src="imgs/profile_pic.jpg">
+                </div>
+                <div class="header-col">
+                    <h1>AntonisPat</h1>
+                    <p class="subtitle">Film & Game composer</p>
+                </div>
+                <div class="header-col">
+                    <!-- Social (Icons of instagram, yt, spotify, tiktok linked to the profile)-->
+                    <div class="social">
+                        <a href="https://www.youtube.com/@antonispat">
+                            <img src="imgs/yt-icon.png">
+                        </a>
+                        <a href="https://www.instagram.com/antonispat1/">
+                            <img src="imgs/insta-icon.png">
+                        </a>
+                        <a href="https://open.spotify.com/artist/7aIy8W8X53zJ9N6IkBYHVi?si=-oaCIuI7QMOWIUbr9FPLyA">
+                            <img src="imgs/spotify-icon.png">
+                        </a>
+                        <a href="https://www.tiktok.com/@antonispat1?_r=1&_t=ZN-95f9JFn2ffa">
+                            <img src="imgs/tiktok-icon.png">
+                        </a>
+                    </div>     
+                </div>
+            </div>
+
+            <div class="header-item">
+                <div class="header-col">
+                    <h2>Contact me</h2>
+                    <ul>
+                        <li>
+                            <div class="contact">
+                                <p>discord: AntonisP#5202</p>
+                                <div class="cp-btn">
+                                    <button 
+                                        id="discord-btn"
+                                        onclick="copyText('AntonisP#5202', this)"
+                                    >
+                                        <span class="cp-btntext">Copy!</span>
+                                        <img class="cp-icon" src="imgs/copy-icon.png">
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact">
+                                <p>email: antonispat4@gmail.com</p>
+                                <div class="cp-btn">
+                                    <button 
+                                        id="mail-btn"
+                                        onclick="copyText('antonispat4@gmail.com', this)"
+                                        onmouseout="showCopyable(this)"
+                                    >
+                                        <span class="cp-btntext">Copy!</span>
+                                        <img class="cp-icon" src="imgs/copy-icon.png">
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </header>
+
+        <main>
+            <div class="main-col">
+                <h2>Film Scoring</h2>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/rhUcIHq-3ZI?si=VSs4YB-9jzlWnMtL" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen
+                ></iframe>
+                <iframe
+                    width="315"
+                    height="560"
+                    src="https://www.youtube.com/embed/bSbQ4SfPEPE"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen
+                ></iframe>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/S0DPmhfHSZU?si=zGzW2hWTJ8xm4IJN" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen
+                ></iframe>
+
+                <h2>Arranging</h2>
+                <p>
+                    Do you need sheet music for a specific song?<br/>
+                    I have posted over 100 scores with sheet music on musescore<br/>
+                    (you can check them <a href="https://musescore.com/httpsmusescore_comuser35716125">here</a>)<br/> 
+                    and I can arrange any composition for:
+                </p>
+                <ul>
+                    <li>piano solo</li>
+                    <li>leadsheet</li>
+                    <li>ensemble/band</li>
+                    <li>orchestra</li>
+                </ul>
+                <p>(DM to discuss payment rates)</p>
+            </div>
+            
+            <div class="main-col">
+                <h2>Game Scoring</h2>
+
+                <p>Tracks composed for indie games on development</p>
+                <!-- Load audio from audio files -->
+                
+                <h3>Ambient</h3>
+                <ost-audio-player
+                    track-title="World's reflect: OST for “Ender lands”"
+                    tags="relaxing, atmospheric"
+                    src="audio/worlds_reflect.mp3"
+                ></ost-audio-player>
+
+                <ost-audio-player
+                    track-title="Unknown path: OST for “Ender lands”"
+                    tags="relaxing, atmospheric"
+                    src="audio/unknown_path.mp3"
+                ></ost-audio-player>
+
+                <ost-audio-player
+                    track-title="Tribal war: OST for “Slay the king”"
+                    tags="war tribal drums + ambient instruments"
+                    src="audio/tribal_war.mp3"
+                ></ost-audio-player>
+
+                <h3>Cinematic</h3>
+
+                <ost-audio-player
+                    track-title="Trailer theme: Trailer theme for “Ender lands”"
+                    src="audio/trailer_theme.mp3"
+                ></ost-audio-player>
+
+                <h3>Custom/Mixed genres</h3>
+
+                <ost-audio-player
+                    track-title="Magical world: OST for “Everfair”"
+                    tags="relaxing, nostalgic"
+                    src="audio/magical_world.mp3"
+                ></ost-audio-player>
+
+                <ost-audio-player
+                    track-title="Aquarium: OST for aquarium card game"
+                    tags="ocean, upbeat, relaxing, fun"
+                    src="audio/aquarium.mp3"
+                ></ost-audio-player>
+
+                <h3>Rock/Electronic</h3>
+                
+                <ost-audio-player
+                    track-title="Not over yet: OST for “Danganronpa ALTER”"
+                    src="audio/not_over_yet.mp3"
+                ></ost-audio-player>
+
+                <ost-audio-player
+                    track-title="MonoChi theme: OST for “Danganronpa ALTER”"
+                    tags="relaxing, atmospheric"
+                    src="audio/monochi_theme.mp3"
+                ></ost-audio-player>
+                </div>
+
+            </div>
+            <div class="main-col">
+                <h2>About me</h2>
+                <p>
+                    Do you need a composer for your project?<br />
+                    I am an experienced pianist, composer & producer<br />
+                    with a degree on classical piano, and on musical harmony,<br />
+                    as well as more than six years of composing experience.<br />
+                    I compose music for films, animations & video games.<br/>
+                    What I can provide:
+                </p>
+                <ul>
+                    <li>cinematic/orchestral compositions</li>
+                    <li>classical music compositions</li>
+                    <li>ambient compositions</li>
+                    <li>custom game music</li>
+                    <li>rock/electronic compositions</li>
+                    <li>jazz compositions</li>
+                    <li>arrangements of existing compositions</li>
+                </ul>
+                <p>I can also include:</p>
+                <ul>
+                    <li>loopable tracks</li>
+                    <li>separated tracks/stems</li>
+                    <li>mixing & mastering</li>
+                </ul>
+                <p>
+                    Payment rates: 30-40 euros (or 35-45 USD)<br/>
+                    per minute, negotiable<br/>
+                    Feel free to contact me on discord or email.<br/>
+                    Let's create something together!
+                </p>
+
+                <h2>More Audio Samples</h2>
+
+                <h3>Jazz</h3>
+
+                <ost-audio-player
+                    track-title="Bed Jazz"
+                    src="audio/bed_jazz.mp3"
+                ></ost-audio-player>
+
+                <ost-audio-player
+                    track-title="Funky Break"
+                    src="audio/funky_break.mp3"
+                ></ost-audio-player>
+
+                <h3>Horror</h3>
+
+                <ost-audio-player
+                    track-title="Behind the Shadows"
+                    src="audio/behind_the_shadows.mp3"
+                ></ost-audio-player>
+
+                <h3>Sci-fi</h3>
+
+                <ost-audio-player
+                    track-title="Butter"
+                    src="audio/butter.mp3"
+                ></ost-audio-player>
+
+                <h3>Classical</h3>
+
+                <iframe 
+                    width="100%"
+                    height="166"
+                    scrolling="no"
+                    frameborder="no"
+                    allow="autoplay; encrypted-media"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2382278562&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                ></iframe>
+                <div 
+                    style="
+                        font-size: 10px;
+                        color: aliceblue;
+                        line-break: anywhere;
+                        word-break: normal;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+                        font-weight: 100;
+                    "
+                    >
+                    <a 
+                        href="https://soundcloud.com/antonispat"
+                        title="AntonisPat"
+                        target="_blank"
+                        style="color: aliceblue; text-decoration: none;"
+                        >AntonisPat
+                    </a>
+                     · 
+                    <a 
+                        href="https://soundcloud.com/antonispat/piano-concerto-i-alla-marcia"
+                        title="Piano concerto I: Alla Marcia"
+                        target="_blank"
+                        style="color: aliceblue; text-decoration: none;"
+                        >Piano concerto I: Alla Marcia
+                    </a>
+                </div>
+
+                <iframe 
+                    width="100%" 
+                    height="166" 
+                    scrolling="no" 
+                    frameborder="no" 
+                    allow="autoplay; encrypted-media" 
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2382272931&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                    >
+                </iframe>
+                <div 
+                    style="
+                        font-size: 10px;
+                        color: aliceblue;
+                        line-break: anywhere;
+                        word-break: normal;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+                        font-weight: 100;
+                    ">
+                    <a 
+                        href="https://soundcloud.com/antonispat"
+                        title="AntonisPat"
+                        target="_blank"
+                        style="color: aliceblue; text-decoration: none;"
+                        >AntonisPat
+                    </a>
+                     · 
+                    <a 
+                        href="https://soundcloud.com/antonispat/piano-concerto-ii-andante"
+                        title="Piano concerto II: Andante"
+                        target="_blank"
+                        style="color: aliceblue; text-decoration: none;"
+                        >Piano concerto II: Andante
+                    </a>
+                </div>
+
+                <iframe 
+                    width="100%"
+                    height="166"
+                    scrolling="no"
+                    frameborder="no"
+                    allow="autoplay; encrypted-media"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2382602658&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                    >
+                </iframe>
+                <div
+                    style="
+                        font-size: 10px;
+                        color: aliceblue;
+                        line-break: anywhere;
+                        word-break: normal;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+                        font-weight: 100;"
+                    >
+                    <a 
+                        href="https://soundcloud.com/antonispat"
+                        title="AntonisPat"
+                        target="_blank"
+                        style="color: aliceblue; text-decoration: none;"
+                        >AntonisPat
+                    </a>
+                     · 
+                    <a 
+                        href="https://soundcloud.com/antonispat/piano-concerto-iii"
+                        title="Piano concerto III"
+                        target="_blank"
+                        style="color: aliceblue; text-decoration: none;"
+                        >Piano concerto III
+                    </a>    
+                </div>
+
+                <h3>Medieval-Orchestral</h3>
+
+                <iframe
+                    width="420" 
+                    height="236" 
+                    src="https://www.youtube.com/embed/3pFBytMKc2E?si=2_m357Za0BE9wg9o"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen
+                    >
+                </iframe>
+
+                <iframe
+                    width="100%"
+                    height="166"
+                    scrolling="no"
+                    frameborder="no"
+                    allow="autoplay;
+                    encrypted-media"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2383620723&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                    >
+                </iframe>
+                <div 
+                    style="
+                        font-size: 10px;
+                        color: aliceblue;
+                        line-break: anywhere;
+                        word-break: normal;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+                        font-weight: 100;"
+                    >
+                    <a 
+                        href="https://soundcloud.com/antonispat"
+                        title="AntonisPat"
+                        target="_blank"
+                        style="color: aliceblue; text-decoration: none;"
+                        >AntonisPat
+                    </a>
+                     · 
+                    <a 
+                        href="https://soundcloud.com/antonispat/battle-for-the-lost-kingdom"
+                        title="Battle for the lost kingdom"
+                        target="_blank"
+                        style="color: aliceblue; text-decoration: none;"
+                        >Battle for the lost kingdom
+                    </a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
