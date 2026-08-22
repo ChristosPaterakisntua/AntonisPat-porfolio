@@ -15,22 +15,16 @@ function formatTime(time) {
     return `${Math.floor(time / 60)}:${Math.floor(time % 60).toString().padStart(2, "0")}`;
 }
 class OstAudioPlayer extends HTMLElement {
-    static observedAttributes = ["track-title", "tags", "src"];
-    button;
-    img;
-    trackTitle;
-    audio;
-    progressBar;
-    progressFill;
-    progressDot;
-    currentTimeText;
-    totalTimeText;
-    isDragging = false;
-    initialized = false;
+    constructor() {
+        super(...arguments);
+        this.isDragging = false;
+        this.initialized = false;
+    }
     render() {
-        const title = this.getAttribute("track-title") ?? "";
-        const tags = this.getAttribute("tags") ?? "";
-        const src = this.getAttribute("src") ?? "";
+        var _a, _b, _c;
+        const title = (_a = this.getAttribute("track-title")) !== null && _a !== void 0 ? _a : "";
+        const tags = (_b = this.getAttribute("tags")) !== null && _b !== void 0 ? _b : "";
+        const src = (_c = this.getAttribute("src")) !== null && _c !== void 0 ? _c : "";
         this.innerHTML = `
             <div class="ost-main">
                 <button class="player-btn">
@@ -161,6 +155,18 @@ class OstAudioPlayer extends HTMLElement {
         }
     }
 }
+OstAudioPlayer.observedAttributes = ["track-title", "tags", "src"];
 let curPlaying = null;
 let lastPlayed = null;
 customElements.define("ost-audio-player", OstAudioPlayer);
+const bio = document.getElementById("bio");
+const date = new Date();
+const years_of_experience = date.getFullYear() - 2020;
+bio.innerHTML = `
+    Do you need a composer for your project? 
+    I am an experienced pianist, composer & producer 
+    with a degree on classical piano, and on musical harmony, 
+    as well as more than ${years_of_experience} years of composing experience.
+    I compose music for films, animations & video games.<br/>
+    What I can provide:
+`;

@@ -17,7 +17,7 @@ function copyText(
     }, 1500);
 }
 
-function formatTime(time: number) : string {
+function formatTime(time: number): string {
     return `${Math.floor(time / 60)}:${Math.floor(time % 60).toString().padStart(2, "0")}`;
 }
 
@@ -204,3 +204,17 @@ let curPlaying: OstAudioPlayer | null = null;
 let lastPlayed: OstAudioPlayer | null = null;
 
 customElements.define("ost-audio-player", OstAudioPlayer);
+
+
+const bio = document.getElementById("bio") as HTMLParagraphElement;
+
+const date = new Date();
+const years_of_experience = date.getFullYear() - 2020;
+bio.innerHTML = `
+    Do you need a composer for your project? 
+    I am an experienced pianist, composer & producer 
+    with a degree on classical piano, and on musical harmony, 
+    as well as more than ${years_of_experience} years of composing experience.
+    I compose music for films, animations & video games.<br/>
+    What I can provide:
+`;
