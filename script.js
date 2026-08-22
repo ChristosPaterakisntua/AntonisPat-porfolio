@@ -34,7 +34,7 @@ class OstAudioPlayer extends HTMLElement {
         this.innerHTML = `
             <div class="ost-main">
                 <button class="player-btn">
-                    <img src="imgs/play-icon.png" alt="Play">
+                    <img src="imgs/play-icon.webp" alt="Play">
                 </button>
                 <div class="audio-txt">
                     <p>${title}</p>
@@ -69,7 +69,7 @@ class OstAudioPlayer extends HTMLElement {
             curPlaying = null;
         }
         lastPlayed = this;
-        this.img.src = "imgs/play-icon.png";
+        this.img.src = "imgs/play-icon.webp";
         this.img.alt = "Play";
         this.trackTitle.style.fontWeight = "normal";
     }
@@ -86,7 +86,7 @@ class OstAudioPlayer extends HTMLElement {
             if (lastPlayed) {
                 lastPlayed.hideProgressBar();
             }
-            this.img.src = "imgs/pause-icon.png";
+            this.img.src = "imgs/pause-icon.webp";
             this.img.alt = "Pause";
             this.trackTitle.style.fontWeight = "bold";
             this.progressBar.style.display = "block";
