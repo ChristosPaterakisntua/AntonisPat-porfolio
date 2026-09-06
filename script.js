@@ -34,7 +34,7 @@ class OstAudioPlayer extends HTMLElement {
                     <p>${title}</p>
                     <p class="tags">${tags}</p>
                 </div>
-                <audio>
+                <audio preload="none">
                     <source src="${src}" type="audio/mpeg">
                 </audio>
             </div>
