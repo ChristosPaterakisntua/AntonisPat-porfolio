@@ -73,11 +73,11 @@ class OstAudioPlayer extends HTMLElement {
     async start() {
         try {
             await this.audio.play();
-            if (curPlaying) {
+            if (curPlaying !== null && curPlaying !== this) {
                 curPlaying.stop();
             }
             curPlaying = this;
-            if (lastPlayed) {
+            if (lastPlayed !== null && lastPlayed !== this) {
                 lastPlayed.hideProgressBar();
             }
             this.img.src = "imgs/pause-icon.webp";
@@ -119,6 +119,14 @@ class OstAudioPlayer extends HTMLElement {
             }
         });
         this.audio.addEventListener("ended", () => this.stop());
+        this.audio.addEventListener("pause", () => {
+            if (curPlaying === this) {
+                curPlaying = null;
+                this.img.src = "imgs/play-icon.webp";
+                this.img.alt = "Play";
+                this.trackTitle.style.fontWeight = "normal";
+            }
+        });
         this.audio.addEventListener("timeupdate", () => this.updateProgress());
         this.progressBar.addEventListener("click", (event) => this.setProgressFromPointer(event));
         this.progressDot.addEventListener("pointerdown", (event) => {
@@ -131,6 +139,12 @@ class OstAudioPlayer extends HTMLElement {
             }
         });
         this.progressDot.addEventListener("pointerup", () => {
+            this.isDragging = false;
+        });
+        this.progressDot.addEventListener("pointercancel", () => {
+            this.isDragging = false;
+        });
+        this.progressDot.addEventListener("lostpointercapture", () => {
             this.isDragging = false;
         });
         this.audio.addEventListener("loadedmetadata", () => {
