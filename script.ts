@@ -228,10 +228,9 @@ const bio = document.getElementById("bio") as HTMLParagraphElement;
 const date = new Date();
 const years_of_experience = date.getFullYear() - 2020;
 bio.innerHTML = `
-    Do you need a composer for your project? 
-    I am an experienced pianist, composer & producer 
-    with a degree on classical piano, and on musical harmony, 
-    as well as more than ${years_of_experience} years of composing experience.
-    I compose music for films, animations & video games.<br/>
+    Do you need a composer/arranger/sound designer for your project? 
+    I am an experienced pianist, composer & producer with a degree on classical piano, 
+    and on musical harmony, as well as more than ${years_of_experience} years of composing experience. 
+    I compose music, and audio for films, animations & video games.
     What I can provide:
 `;
